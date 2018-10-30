@@ -1,0 +1,33 @@
+{
+    "name": "tungltdev/laravel-settings",
+    "description": "Laravel 5 Persistent Settings",
+    "keywords": [
+        "laravel",
+        "settings",
+        "persistent"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "LE THANH TUNG",
+            "email": "tunglt.dev@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/support": "5.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.6.*",
+        "illuminate/database": ">=5.1 <6.0",
+        "illuminate/events": ">=4.1 <6.0"
+    },
+    "autoload": {
+        "files": [
+            "src/helpers.php"
+        ],
+        "psr-4": {
+            "Tungltdev\\LaravelSettings\\": "src/"
+        }
+    }
+}
