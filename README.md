@@ -1,5 +1,5 @@
 # Laravel-Settings
-Laravel 5.5.x Persistent Settings (Database + Cache)  
+Laravel 5.7.x Persistent Settings (Database + Cache)  
 
 ### Attention: for update to v1.2.0
 Re-Publish new migration file
