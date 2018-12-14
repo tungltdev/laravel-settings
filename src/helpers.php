@@ -18,3 +18,16 @@ if (!function_exists('settings'))
         return Settings::get($key, $default);
     }
 }
+
+if (!function_exists('settingset'))
+{
+    /**
+     * @param string|null $key
+     * @param null $value
+     * @return mixed|\Tungltdev\LaravelSettings\Facades\Settings
+     */
+    function settingset($key = null, $value = null)
+    {
+        return Settings::set($key, $value);
+    }
+}
