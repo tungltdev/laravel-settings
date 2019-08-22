@@ -1,31 +1,14 @@
 # Laravel-Settings
-Laravel 5.7.x Persistent Settings (Database + Cache)  
-
-### Attention: for update to v1.2.0
-Re-Publish new migration file
-
-    $ php artisan vendor:publish --provider="Tungltdev\LaravelSettings\SettingsServiceProvider" --force
-    
-And run
-
-    $ php artisan migrate
+Laravel ^5.7.x Persistent Settings (Database + Cache)  
 
 ## How to Install
-Require this package with composer ([Packagist](https://packagist.org/packages/tungltdev/laravel-settings)) using the following command:
+Require this package with composer ([Packagist](https://packagist.org/packages/tungltdev/laravel-settings)) using the following command then run 
 
-    composer require tungltdev/laravel-settings
-
-or modify your `composer.json`:
-   
-       "require": {
-          "tungltdev/laravel-settings": "1.*"
-       }
-       
-then run `composer update`:
+	composer require tungltdev/laravel-settings
 
 After updating composer, Register the ServiceProvider to the `providers` array in `config/app.php`
 
-    'Tungltdev\LaravelSettings\SettingsServiceProvider',
+    Tungltdev\LaravelSettings\SettingsServiceProvider::class,
     
 Add an alias for the facade to `aliases` array in  your `config/app.php`
 
@@ -72,7 +55,7 @@ Forget all values
 
     Settings::flush();
     
-## Fallback to Laravel Config (available in v1.2.0)
+## Fallback to Laravel Config
 
 How to activate?
 
@@ -88,19 +71,3 @@ Example
     Settings::get('mail.host');
 
 > Note: It will work if default value in laravel setting is not set
-    
-### Changelogs
-v1.2.0 - Dec 16th, 2015
-
-* Bugs fix
-* Adding Feature: Fallback Value 
-
-
-### To Do
-
-- 
-
-### License
-
-The Laravel 5 Persistent Settings is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
-
