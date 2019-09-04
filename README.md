@@ -6,17 +6,9 @@ Require this package with composer ([Packagist](https://packagist.org/packages/t
 
 	composer require tungltdev/laravel-settings
 
-After updating composer, Register the ServiceProvider to the `providers` array in `config/app.php`
-
-    Tungltdev\LaravelSettings\SettingsServiceProvider::class,
-    
-Add an alias for the facade to `aliases` array in  your `config/app.php`
-
-    'Settings'  => Tungltdev\LaravelSettings\Facades\Settings::class,
-
 Publish the config and migration files now (Attention: This command will not work if you don't follow previous instruction):
 
-    $ php artisan vendor:publish --provider="Tungltdev\LaravelSettings\SettingsServiceProvider" --force
+    $ php artisan vendor:publish --provider="Tungltdev\LaravelSettings\SettingsServiceProvider"
     
 Change `config/settings.php` according to your needs. If you change `db_table`, don't forget to change the table's name
 in the migration file as well.
@@ -31,14 +23,20 @@ Create the `settings` table.
 Set a value
 
     Settings::set('key', 'value');
+    or
+    settingset('key', 'value');
     
 Get a value
 
     $value = Settings::get('key');
+    or
+    $value = settings('key');
     
 Get a value with Default Value.
 
     $value = Settings::get('key', 'Default Value');
+    or
+    $value = settings('key', 'Default Value');
     
 > Note: If key is not found (null) in cache or settings table, it will return default value
 
